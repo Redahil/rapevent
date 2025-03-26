@@ -126,11 +126,14 @@ body {
   color: var(--primary-color) !important;
 }
 
+.navbar-scroll .socila-media-icons a {
+  color: var(--secondary-color) !important;
+}
+
 .socila-media-icons a {
   margin-right: 10px;
   font-size: 1.5rem;
 }
-
 
 .card {
   border: none;
@@ -140,7 +143,7 @@ body {
 
 .card:hover {
   transform: translateY(-4px);
-   box-shadow: 0 0 15px rgba(0, 231, 1, 0.5);
+   box-shadow: 0 0 10px rgba(0, 231, 1, 0.4);
   transition: box-shadow 0.35s ease-in-out;
 }
 
