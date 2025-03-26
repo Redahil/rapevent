@@ -1,146 +1,183 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+
 :root {
   --primary-color: #000000;
   --secondary-color: #00e701;
-  --third-colo:#1F1F1F;
+  --third-color: #1F1F1F;
 }
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #121212;
+
 }
 
 .highlight {
   color: var(--secondary-color);
 }
+
 .primary {
-    color: var(--primary-color);
-  }
+  color: var(--primary-color);
+}
+
+.card-body img {
+  margin-top: -70px;
+  width: 250px;
+  margin-bottom: 15px; /* Add spacing below the image */
+}
+
 .cover-image {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .cover-title-wrapper {
   text-align: center;
   position: absolute;
   z-index: 1;
 }
+
 .cover-title {
   font-size: 32px;
   color: white;
   font-weight: bold;
 }
+
 .cover-subtitle {
   line-height: 5px;
   font-weight: bold;
 }
+
 .card-body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start; /* Ensures the image starts at the same position */
+  min-height: 350px; /* Adjust this based on your content */
+}
 }
 
 .card-img-top {
   display: block;
-  width: 100px; /* Adjust size if needed */
+  width: 100px;
   height: auto;
   margin: 0 auto;
 }
 
-.card-title {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px; /* Ensures spacing */
-  white-space: normal; /* Prevents text from aligning beside the image */
-}
-
+/* Ensure individual card styling */
 .card {
+  padding: 20px;
   margin-bottom: 20px;
-  background: rgba(248, 249, 250, 0.3); /* 80% opacity white */
-  backdrop-filter: blur(20px); /* Adds a subtle blur effect */
-  background-color:#1F1F1F;
-  border-radius: 10px; /* Optional: Adds rounded corners */
+  background: rgba(248, 249, 250, 0.3);
+  backdrop-filter: blur(20px);
+  background-color: var(--third-color);
+  border-radius: 10px;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+/* Apply padding to each card container */
+.card-row .col-md-4 {
+  padding-top: 50px; /* Adjust this value as needed */
+}
+.card-row-second .col-md-4 {
+  padding-top: 50px; /* Ensures spacing between cards */
 }
 
 .footer {
   background-color: #1F1F1F;
-  padding: 20px 0;
+
   text-align: center;
+  padding-top: 100px; /* Increase top padding of footer */
+
 }
+.card-text {
+  padding: 10px; /* Add spacing between title and text */
+   text-align: center; /* Ensures text alignment consistency */
+}
+
 .navbar {
-  background-color: transparent; /* Set the background color of the navbar to transparent */
+  background-color: transparent;
   transition: all 660ms;
 }
+
 .navbar-scroll {
-  background-color: white;
-  background: rgba(248, 249, 250, 0.5); /* 80% opacity white */
+  background: rgba(248, 249, 250, 0.5);
 }
-.navbar-scroll .nav-item .nav-link {
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ margin-top: -50px; /* Move the first row higher */
+}
+.card-row-second {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px; /* Matches the first row */
+  margin-bottom: 80px; /* Increase space between cards and footer */
+}
+
+
+.navbar-scroll .nav-item .nav-link,
+.navbar-scroll .navbar-brand {
   color: var(--primary-color) !important;
 }
+
 .socila-media-icons a {
   margin-right: 10px;
   font-size: 1.5rem;
 }
-.navbar-scroll .navbar-brand {
-  color: var(--primary-color) !important;
-}
-.navbar-scroll .socila-media-icons a {
-  color: var(--third-color) !important;
-}
-.card-row {
-  margin-top: -100px;
-}
+
+
 .card {
   border: none;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
 }
+
 .card:hover {
   transform: translateY(-4px);
+   box-shadow: 0 0 15px rgba(0, 231, 1, 0.5);
+  transition: box-shadow 0.35s ease-in-out;
 }
-.card-img-top {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-.card-body {
-  padding: 20px;
-}
+
 .card-title {
+  margin-top: 10px; /* Adds spacing between the image and the title */
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 10px;
-  position: relative;
-  display: inline-block;
   color: var(--primary-color);
+  text-align: center;
 }
+
+.card-title-wrapper {
+  text-align: center;
+  margin-bottom: 15px; /* Space between title and the line */
+}
+
+.card-line {
+  width: 40%; /* Ensures consistency */
+  height: 3px; /* Keeps the line bold */
+  background-color: var(--secondary-color); /* Ensures it's green */
+  margin: 10px auto; /* Adds spacing and centers */
+  display: block; /* Forces it to be visible */
+}
+
 .card-text {
   color: #777;
 }
-.card-title::before {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  top: 35px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  height: 3px;
-  background-color: var(--secondary-color);
+
+.card-body img {
+ width: 250px;
+  margin-bottom: 15px; /* Adds space between the image and text */
 }
-.card-body {
-  position: relative;
-  padding: 35px;
-}
-.card .card-body img {
-  margin-top: -70px;
-  width: 250px;
-}
+
 .card-row-second {
   margin-top: 100px;
 }
+
 .active {
   background-color: var(--secondary-color) !important;
   border-radius: 30px;
@@ -148,26 +185,21 @@ body {
   padding-right: 15px;
   color: white;
 }
-.card-a {
-  color: inherit;
-  text-decoration: none;
-}
+
 .row-container {
   padding: 70px;
 }
+
 footer {
-  background-color: #1F1F1F;
+  background-color: #121212;
   color: #777;
 }
+
 footer .copyright {
   border-top: solid 1px rgba(119, 119, 119, 0.163);
   padding: 10px;
 }
-footer .navigations a {
-  color: inherit;
-  text-decoration: none;
-  margin-right: 20px;
-}
+
 #scrollToTop {
   position: fixed;
   bottom: 20px;
@@ -176,6 +208,7 @@ footer .navigations a {
   background-color: #1F1F1F;
   border-color: #00E701;
 }
+
 .about-us {
   padding: 80px 0;
   background-color: white;
@@ -190,4 +223,96 @@ footer .navigations a {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 30px;
+}
+
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Ensure content is centered and stays within the screen */
+.container, .row-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px; /* Prevents content from touching screen edges */
+}
+
+/* Fix any misaligned elements */
+.card-row, .card-row-second {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Fix images breaking the layout */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent extra spacing on small screens */
+@media (max-width: 576px) {
+  .row-container {
+    padding: 10px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .cover-title {
+    font-size: 24px;
+  }
+  .card-body img {
+    width: 200px;
+  }
+  .row-container {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cover-title {
+    font-size: 20px;
+  }
+  .card-body img {
+    width: 150px;
+  }
+  .row-container {
+    padding: 20px;
+  }
+  .card-body {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cover-title {
+    font-size: 18px;
+  }
+  .cover-subtitle {
+    line-height: normal;
+  }
+  .card-body img {
+    width: 120px;
+  }
+  .row-container {
+    padding: 10px;
+  }
+  .card {
+    margin-bottom: 30px; /* Added spacing between stacked cards */
+    box-shadow: 0 0 15px rgba(0, 231, 1, 0.8); /* Green glow effect */
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+
+  .about-us {
+    padding: 40px 0;
+  }
+  .about-us img {
+    width: 150px;
+    height: 150px;
+  }
 }
