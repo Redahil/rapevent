@@ -76,6 +76,8 @@ body {
   transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px; /* Added spacing between stacked cards */
+  box-shadow: 0 10px 30px rgba(0, 231, 1, 0.5); /* Green shadow */    transition: box-shadow 0.3s ease-in-out;
 }
 /* Apply padding to each card container */
 .card-row .col-md-4 {
@@ -281,7 +283,7 @@ img {
     font-size: 20px;
   }
   .card-body img {
-    width: 150px;
+    width: 400px;
   }
   .row-container {
     padding: 20px;
@@ -299,16 +301,12 @@ img {
     line-height: normal;
   }
   .card-body img {
-    width: 120px;
+    width: 400px;
   }
   .row-container {
     padding: 10px;
   }
-  .card {
-    margin-bottom: 30px; /* Added spacing between stacked cards */
-    box-shadow: 0 0 15px rgba(0, 231, 1, 0.8); /* Green glow effect */
-    transition: box-shadow 0.3s ease-in-out;
-  }
+
 
 
   .about-us {
