@@ -345,6 +345,10 @@ html, body {
         .button:focus, .button:active {
             color: #000 !important;
         }
+.button:focus, .button:active {
+    color: white !important; /* Ensures the text stays white */
+    outline: none; /* Removes the default outline on focus */
+}
 
 
 /* Fix images breaking the layout */
