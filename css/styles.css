@@ -340,7 +340,10 @@ html, body {
         }
 
         .button:hover {
-            background-color: #1ed760;
+            background-color: #000000;
+        }
+        .button:focus, .button:active {
+            color: #000 !important;
         }
 
 
