@@ -6,6 +6,23 @@
   --third-color: #1F1F1F;
 }
 
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #181818;
+}
+header h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif; /* Catchy, modern font */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 20px 0;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #121212;
@@ -273,11 +290,67 @@ html, body {
   max-width: 100%;
 }
 
+/* Ensure the streamers section has a scrollable container */
+        .streamers-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto; /* Enables horizontal scrolling */
+            white-space: nowrap;
+            padding: 20px;
+            scroll-behavior: smooth;
+            
+        }
+
+        .streamer-card {
+            background-color: #181818;
+            border-radius: 12px;
+            padding: 15px;
+            min-width: 150px;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .streamer-card:hover {
+            transform: scale(1.05);
+        }
+
+        .streamer-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .streamer-card h3 {
+            font-size: 1rem;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #1db954;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #1ed760;
+        }
+
+
 /* Fix images breaking the layout */
 img {
   max-width: 100%;
   height: auto;
 }
+
+
 
 /* Prevent extra spacing on small screens */
 @media (max-width: 576px) {
@@ -338,3 +411,9 @@ img {
     height: 150px;
   }
 }
+
+
+
+
+
+
